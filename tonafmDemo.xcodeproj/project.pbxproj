@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3AF530051B3D2DA0000AE2B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530041B3D2DA0000AE2B0 /* main.m */; };
+		3AF530081B3D2DA0000AE2B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530071B3D2DA0000AE2B0 /* AppDelegate.m */; };
+		3AF5300B1B3D2DA0000AE2B0 /* tonafmDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530091B3D2DA0000AE2B0 /* tonafmDemo.xcdatamodeld */; };
+		3AF530111B3D2DA0000AE2B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AF5300F1B3D2DA0000AE2B0 /* Main.storyboard */; };
+		3AF530131B3D2DA0000AE2B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AF530121B3D2DA0000AE2B0 /* Images.xcassets */; };
+		3AF530161B3D2DA0000AE2B0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF530141B3D2DA0000AE2B0 /* LaunchScreen.xib */; };
+		3AF530221B3D2DA0000AE2B0 /* tonafmDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530211B3D2DA0000AE2B0 /* tonafmDemoTests.m */; };
+		3AF5302C1B3D2DD1000AE2B0 /* iphoneMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AF5302B1B3D2DD1000AE2B0 /* iphoneMain.storyboard */; };
+		3AF530381B3D3283000AE2B0 /* PlaylistTVCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530371B3D3283000AE2B0 /* PlaylistTVCCell.m */; };
+		3AF5303A1B3D3661000AE2B0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF530391B3D3661000AE2B0 /* MediaPlayer.framework */; };
+		3AF5303E1B3D37C4000AE2B0 /* PlaylistTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF5303D1B3D37C4000AE2B0 /* PlaylistTVC.m */; };
+		3AF530411B405695000AE2B0 /* PlaylistTVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF530401B405695000AE2B0 /* PlaylistTVCCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3AF5301C1B3D2DA0000AE2B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AF52FF71B3D2DA0000AE2B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AF52FFE1B3D2DA0000AE2B0;
+			remoteInfo = tonafmDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3AF52FFF1B3D2DA0000AE2B0 /* tonafmDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tonafmDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AF530031B3D2DA0000AE2B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AF530041B3D2DA0000AE2B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3AF530061B3D2DA0000AE2B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3AF530071B3D2DA0000AE2B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3AF5300A1B3D2DA0000AE2B0 /* tonafmDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tonafmDemo.xcdatamodel; sourceTree = "<group>"; };
+		3AF530101B3D2DA0000AE2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3AF530121B3D2DA0000AE2B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3AF530151B3D2DA0000AE2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3AF5301B1B3D2DA0000AE2B0 /* tonafmDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tonafmDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AF530201B3D2DA0000AE2B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AF530211B3D2DA0000AE2B0 /* tonafmDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tonafmDemoTests.m; sourceTree = "<group>"; };
+		3AF5302B1B3D2DD1000AE2B0 /* iphoneMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iphoneMain.storyboard; path = ../iphoneMain.storyboard; sourceTree = "<group>"; };
+		3AF530361B3D3283000AE2B0 /* PlaylistTVCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistTVCCell.h; sourceTree = "<group>"; };
+		3AF530371B3D3283000AE2B0 /* PlaylistTVCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistTVCCell.m; sourceTree = "<group>"; };
+		3AF530391B3D3661000AE2B0 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		3AF5303C1B3D37C4000AE2B0 /* PlaylistTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistTVC.h; sourceTree = "<group>"; };
+		3AF5303D1B3D37C4000AE2B0 /* PlaylistTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistTVC.m; sourceTree = "<group>"; };
+		3AF530401B405695000AE2B0 /* PlaylistTVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaylistTVCCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AF52FFC1B3D2DA0000AE2B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AF5303A1B3D3661000AE2B0 /* MediaPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AF530181B3D2DA0000AE2B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A006C871B4C6B1700FE1BFC /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+		3AF52FF61B3D2DA0000AE2B0 = {
+			isa = PBXGroup;
+			children = (
+				3AF5303B1B3D3667000AE2B0 /* Frameworks */,
+				3AF530011B3D2DA0000AE2B0 /* tonafmDemo */,
+				3AF5301E1B3D2DA0000AE2B0 /* tonafmDemoTests */,
+				3AF530001B3D2DA0000AE2B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3AF530001B3D2DA0000AE2B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AF52FFF1B3D2DA0000AE2B0 /* tonafmDemo.app */,
+				3AF5301B1B3D2DA0000AE2B0 /* tonafmDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AF530011B3D2DA0000AE2B0 /* tonafmDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3A006C871B4C6B1700FE1BFC /* Audio */,
+				3AF5303F1B3D37D0000AE2B0 /* View Controllers */,
+				3AF5302D1B3D312C000AE2B0 /* Views */,
+				3AF530061B3D2DA0000AE2B0 /* AppDelegate.h */,
+				3AF530071B3D2DA0000AE2B0 /* AppDelegate.m */,
+				3AF5302B1B3D2DD1000AE2B0 /* iphoneMain.storyboard */,
+				3AF5300F1B3D2DA0000AE2B0 /* Main.storyboard */,
+				3AF530121B3D2DA0000AE2B0 /* Images.xcassets */,
+				3AF530141B3D2DA0000AE2B0 /* LaunchScreen.xib */,
+				3AF530091B3D2DA0000AE2B0 /* tonafmDemo.xcdatamodeld */,
+				3AF530021B3D2DA0000AE2B0 /* Supporting Files */,
+			);
+			path = tonafmDemo;
+			sourceTree = "<group>";
+		};
+		3AF530021B3D2DA0000AE2B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AF530031B3D2DA0000AE2B0 /* Info.plist */,
+				3AF530041B3D2DA0000AE2B0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3AF5301E1B3D2DA0000AE2B0 /* tonafmDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				3AF530211B3D2DA0000AE2B0 /* tonafmDemoTests.m */,
+				3AF5301F1B3D2DA0000AE2B0 /* Supporting Files */,
+			);
+			path = tonafmDemoTests;
+			sourceTree = "<group>";
+		};
+		3AF5301F1B3D2DA0000AE2B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AF530201B3D2DA0000AE2B0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3AF5302D1B3D312C000AE2B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3AF530361B3D3283000AE2B0 /* PlaylistTVCCell.h */,
+				3AF530371B3D3283000AE2B0 /* PlaylistTVCCell.m */,
+				3AF530401B405695000AE2B0 /* PlaylistTVCCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3AF5303B1B3D3667000AE2B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AF530391B3D3661000AE2B0 /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AF5303F1B3D37D0000AE2B0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3AF5303C1B3D37C4000AE2B0 /* PlaylistTVC.h */,
+				3AF5303D1B3D37C4000AE2B0 /* PlaylistTVC.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AF52FFE1B3D2DA0000AE2B0 /* tonafmDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AF530251B3D2DA0000AE2B0 /* Build configuration list for PBXNativeTarget "tonafmDemo" */;
+			buildPhases = (
+				3AF52FFB1B3D2DA0000AE2B0 /* Sources */,
+				3AF52FFC1B3D2DA0000AE2B0 /* Frameworks */,
+				3AF52FFD1B3D2DA0000AE2B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tonafmDemo;
+			productName = tonafmDemo;
+			productReference = 3AF52FFF1B3D2DA0000AE2B0 /* tonafmDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3AF5301A1B3D2DA0000AE2B0 /* tonafmDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AF530281B3D2DA0000AE2B0 /* Build configuration list for PBXNativeTarget "tonafmDemoTests" */;
+			buildPhases = (
+				3AF530171B3D2DA0000AE2B0 /* Sources */,
+				3AF530181B3D2DA0000AE2B0 /* Frameworks */,
+				3AF530191B3D2DA0000AE2B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AF5301D1B3D2DA0000AE2B0 /* PBXTargetDependency */,
+			);
+			name = tonafmDemoTests;
+			productName = tonafmDemoTests;
+			productReference = 3AF5301B1B3D2DA0000AE2B0 /* tonafmDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AF52FF71B3D2DA0000AE2B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Lee Inc";
+				TargetAttributes = {
+					3AF52FFE1B3D2DA0000AE2B0 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					3AF5301A1B3D2DA0000AE2B0 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 3AF52FFE1B3D2DA0000AE2B0;
+					};
+				};
+			};
+			buildConfigurationList = 3AF52FFA1B3D2DA0000AE2B0 /* Build configuration list for PBXProject "tonafmDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3AF52FF61B3D2DA0000AE2B0;
+			productRefGroup = 3AF530001B3D2DA0000AE2B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AF52FFE1B3D2DA0000AE2B0 /* tonafmDemo */,
+				3AF5301A1B3D2DA0000AE2B0 /* tonafmDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AF52FFD1B3D2DA0000AE2B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AF5302C1B3D2DD1000AE2B0 /* iphoneMain.storyboard in Resources */,
+				3AF530111B3D2DA0000AE2B0 /* Main.storyboard in Resources */,
+				3AF530161B3D2DA0000AE2B0 /* LaunchScreen.xib in Resources */,
+				3AF530411B405695000AE2B0 /* PlaylistTVCCell.xib in Resources */,
+				3AF530131B3D2DA0000AE2B0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AF530191B3D2DA0000AE2B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AF52FFB1B3D2DA0000AE2B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AF530081B3D2DA0000AE2B0 /* AppDelegate.m in Sources */,
+				3AF5303E1B3D37C4000AE2B0 /* PlaylistTVC.m in Sources */,
+				3AF530381B3D3283000AE2B0 /* PlaylistTVCCell.m in Sources */,
+				3AF530051B3D2DA0000AE2B0 /* main.m in Sources */,
+				3AF5300B1B3D2DA0000AE2B0 /* tonafmDemo.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AF530171B3D2DA0000AE2B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AF530221B3D2DA0000AE2B0 /* tonafmDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AF5301D1B3D2DA0000AE2B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AF52FFE1B3D2DA0000AE2B0 /* tonafmDemo */;
+			targetProxy = 3AF5301C1B3D2DA0000AE2B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3AF5300F1B3D2DA0000AE2B0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AF530101B3D2DA0000AE2B0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3AF530141B3D2DA0000AE2B0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AF530151B3D2DA0000AE2B0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3AF530231B3D2DA0000AE2B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3AF530241B3D2DA0000AE2B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3AF530261B3D2DA0000AE2B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = tonafmDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3AF530271B3D2DA0000AE2B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = tonafmDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3AF530291B3D2DA0000AE2B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = tonafmDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tonafmDemo.app/tonafmDemo";
+			};
+			name = Debug;
+		};
+		3AF5302A1B3D2DA0000AE2B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = tonafmDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tonafmDemo.app/tonafmDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AF52FFA1B3D2DA0000AE2B0 /* Build configuration list for PBXProject "tonafmDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AF530231B3D2DA0000AE2B0 /* Debug */,
+				3AF530241B3D2DA0000AE2B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AF530251B3D2DA0000AE2B0 /* Build configuration list for PBXNativeTarget "tonafmDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AF530261B3D2DA0000AE2B0 /* Debug */,
+				3AF530271B3D2DA0000AE2B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AF530281B3D2DA0000AE2B0 /* Build configuration list for PBXNativeTarget "tonafmDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AF530291B3D2DA0000AE2B0 /* Debug */,
+				3AF5302A1B3D2DA0000AE2B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3AF530091B3D2DA0000AE2B0 /* tonafmDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3AF5300A1B3D2DA0000AE2B0 /* tonafmDemo.xcdatamodel */,
+			);
+			currentVersion = 3AF5300A1B3D2DA0000AE2B0 /* tonafmDemo.xcdatamodel */;
+			path = tonafmDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3AF52FF71B3D2DA0000AE2B0 /* Project object */;
+}

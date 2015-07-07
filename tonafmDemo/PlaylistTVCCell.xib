@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaylistCell" id="KUO-ew-MAq" customClass="PlaylistTVCCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KUO-ew-MAq" id="Gld-At-mac">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ToM-ZN-zrF">
+                        <rect key="frame" x="65" y="21" width="255" height="33"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lC8-qM-hf4">
+                        <rect key="frame" x="1" y="10" width="56" height="56"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="56" id="vAS-Fn-DgZ"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="lC8-qM-hf4" secondAttribute="bottom" constant="1" id="1WC-sc-dwf"/>
+                    <constraint firstItem="ToM-ZN-zrF" firstAttribute="leading" secondItem="lC8-qM-hf4" secondAttribute="trailing" constant="8" symbolic="YES" id="AhJ-FJ-eRq"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="lC8-qM-hf4" secondAttribute="bottom" constant="-4.5" id="Gxa-Yz-V3p"/>
+                    <constraint firstItem="ToM-ZN-zrF" firstAttribute="centerY" secondItem="Gld-At-mac" secondAttribute="centerY" id="N47-IX-ZPr"/>
+                    <constraint firstItem="lC8-qM-hf4" firstAttribute="top" secondItem="Gld-At-mac" secondAttribute="topMargin" constant="2" id="QiO-xh-oaz"/>
+                    <constraint firstItem="lC8-qM-hf4" firstAttribute="leading" secondItem="Gld-At-mac" secondAttribute="leadingMargin" constant="-7" id="cSC-Op-nX8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ToM-ZN-zrF" secondAttribute="trailing" constant="-8" id="dq8-eX-FjN"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="lC8-qM-hf4" secondAttribute="bottom" constant="-8.5" id="iYe-ey-t74"/>
+                    <constraint firstItem="lC8-qM-hf4" firstAttribute="leading" secondItem="Gld-At-mac" secondAttribute="leadingMargin" constant="-7" id="j5a-7h-x6R"/>
+                    <constraint firstItem="ToM-ZN-zrF" firstAttribute="top" secondItem="Gld-At-mac" secondAttribute="topMargin" constant="13" id="lem-QT-Jl2"/>
+                    <constraint firstItem="lC8-qM-hf4" firstAttribute="top" secondItem="Gld-At-mac" secondAttribute="topMargin" constant="-4" id="pSf-7C-rNF"/>
+                    <constraint firstItem="ToM-ZN-zrF" firstAttribute="leading" secondItem="lC8-qM-hf4" secondAttribute="trailing" constant="8" symbolic="YES" id="tSn-CN-a4S"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Gxa-Yz-V3p"/>
+                        <exclude reference="cSC-Op-nX8"/>
+                        <exclude reference="iYe-ey-t74"/>
+                        <exclude reference="pSf-7C-rNF"/>
+                        <exclude reference="tSn-CN-a4S"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="songCover" destination="lC8-qM-hf4" id="Rrr-Pc-dlL"/>
+                <outlet property="songTitle" destination="ToM-ZN-zrF" id="R5l-WN-cLT"/>
+            </connections>
+            <point key="canvasLocation" x="256" y="243"/>
+        </tableViewCell>
+    </objects>
+</document>
