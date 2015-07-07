@@ -9,45 +9,28 @@
 #import "PlaylistTVC.h"
 #import "PlaylistTVCCell.h"
 
-#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
+
 @import SystemConfiguration.CaptiveNetwork;
 
 @interface PlaylistTVC ()
 
-@property (nonatomic, retain) MPMusicPlayerController *musicPlayer;
+@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
+
 @property (nonatomic, strong) NSMutableArray *localMusicList;
 
 @end
 
-@implementation PlaylistTVC
+@implementation PlaylistTVC {
+    BOOL _isPlaying;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Initialize music player
-    MPMusicPlayerController* appMusicPlayer =
-    [MPMusicPlayerController applicationMusicPlayer];
-    
-    [appMusicPlayer setShuffleMode: MPMusicShuffleModeOff];
-    [appMusicPlayer setRepeatMode: MPMusicRepeatModeNone];
-    
-    self.musicPlayer = [MPMusicPlayerController applicationMusicPlayer];
-    
-    // Register music plaer notifications
-    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-    [notificationCenter addObserver:self
-                           selector:@selector(handleNowPlayingItemChanged:)
-                               name:MPMusicPlayerControllerNowPlayingItemDidChangeNotification
-                             object:self.musicPlayer];
-    [notificationCenter addObserver:self
-                           selector:@selector(handlePlaybackStateChanged:)
-                               name:MPMusicPlayerControllerPlaybackStateDidChangeNotification
-                             object:self.musicPlayer];
-    [notificationCenter addObserver:self
-                           selector:@selector(handleExternalVolumeChanged:)
-                               name:MPMusicPlayerControllerVolumeDidChangeNotification
-                             object:self.musicPlayer];
-    [self.musicPlayer beginGeneratingPlaybackNotifications];
+    // Register music playr notifications
+    _isPlaying = NO;
+    [self configureAudioSession];
     
     [self loadAllMusic];
     // Uncomment the following line to preserve selection between presentations.
@@ -73,7 +56,6 @@
         NSString *songTitle = [song valueForProperty: MPMediaItemPropertyTitle];
         NSLog (@"%@", songTitle);
     }
-    [_musicPlayer setQueueWithQuery: allMusicQuery];
 }
 
 
@@ -165,14 +147,17 @@
 
 //	 To conform to the Human Interface Guidelines, selections should not be persistent --
 //	 deselect the row after it has been selected.
-/*
+
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
-    MPMediaItem *anItem = (MPMediaItem *)[_localMusicList objectAtIndex:[indexPath row]];
-    _musicPlayer.nowPlayingItem = anItem;
-    [_musicPlayer play];
-    NSLog(@"Selected: %@", anItem.title);
+    MPMediaItem *item = (MPMediaItem *)[_localMusicList objectAtIndex:[indexPath row]];
+    NSLog(@"Selected: %@", item.title);
+    // get a URL reference to the selected item
+    NSURL *url = [item valueForProperty:MPMediaItemPropertyAssetURL];
+    
+    // pass the URL to playURL:, defined earlier in this file
+    [self playURL:url];
     //[tableView deselectRowAtIndexPath: indexPath animated: YES];
-}*/
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -218,24 +203,45 @@
 }
 */
 
+#pragma mark - Music control
+
+- (void)playPause {
+    if (_isPlaying) {
+        // Pause audio here
+        [_audioPlayer pause];
+    }
+    else {
+        // Play audio here
+        [_audioPlayer play];
+    }
+    _isPlaying = !_isPlaying;
+}
+
+- (void)playURL:(NSURL *)url {
+    if (_isPlaying) {
+        [self playPause]; // Pause the previous audio player
+    }
+    NSError *error;
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    if (error) {
+        NSLog(@"%@", [error localizedDescription]);
+    }
+    [_audioPlayer setNumberOfLoops:-1];
+    
+    [self playPause];   // Play
+}
+
+- (void)configureAudioSession {
+    NSError *error;
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&error];
+    
+    if (error) {
+        NSLog(@"Error setting category: %@", [error description]);
+    }
+}
+
 - (void)dealloc {
-    
-    [[NSNotificationCenter defaultCenter]
-     removeObserver: self
-     name:           MPMusicPlayerControllerNowPlayingItemDidChangeNotification
-     object:         _musicPlayer];
-    
-    [[NSNotificationCenter defaultCenter]
-     removeObserver: self
-     name:           MPMusicPlayerControllerPlaybackStateDidChangeNotification
-     object:         _musicPlayer];
-    
-    [[NSNotificationCenter defaultCenter]
-     removeObserver: self
-     name:           MPMusicPlayerControllerVolumeDidChangeNotification
-     object:         _musicPlayer];
-    
-    [_musicPlayer endGeneratingPlaybackNotifications];
+    // TODO
     
 }
 

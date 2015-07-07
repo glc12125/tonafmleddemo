@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A006C991B4C827B00FE1BFC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A006C981B4C827B00FE1BFC /* AVFoundation.framework */; };
 		3AF530051B3D2DA0000AE2B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530041B3D2DA0000AE2B0 /* main.m */; };
 		3AF530081B3D2DA0000AE2B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530071B3D2DA0000AE2B0 /* AppDelegate.m */; };
 		3AF5300B1B3D2DA0000AE2B0 /* tonafmDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530091B3D2DA0000AE2B0 /* tonafmDemo.xcdatamodeld */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A006C981B4C827B00FE1BFC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3AF52FFF1B3D2DA0000AE2B0 /* tonafmDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tonafmDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AF530031B3D2DA0000AE2B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AF530041B3D2DA0000AE2B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A006C991B4C827B00FE1BFC /* AVFoundation.framework in Frameworks */,
 				3AF5303A1B3D3661000AE2B0 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +158,7 @@
 		3AF5303B1B3D3667000AE2B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A006C981B4C827B00FE1BFC /* AVFoundation.framework */,
 				3AF530391B3D3661000AE2B0 /* MediaPlayer.framework */,
 			);
 			name = Frameworks;
