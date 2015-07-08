@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A006C991B4C827B00FE1BFC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A006C981B4C827B00FE1BFC /* AVFoundation.framework */; };
+		3A006C9C1B4D041F00FE1BFC /* Meter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A006C9B1B4D041F00FE1BFC /* Meter.cpp */; };
 		3AF530051B3D2DA0000AE2B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530041B3D2DA0000AE2B0 /* main.m */; };
 		3AF530081B3D2DA0000AE2B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530071B3D2DA0000AE2B0 /* AppDelegate.m */; };
 		3AF5300B1B3D2DA0000AE2B0 /* tonafmDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530091B3D2DA0000AE2B0 /* tonafmDemo.xcdatamodeld */; };
@@ -18,7 +19,7 @@
 		3AF5302C1B3D2DD1000AE2B0 /* iphoneMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AF5302B1B3D2DD1000AE2B0 /* iphoneMain.storyboard */; };
 		3AF530381B3D3283000AE2B0 /* PlaylistTVCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530371B3D3283000AE2B0 /* PlaylistTVCCell.m */; };
 		3AF5303A1B3D3661000AE2B0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF530391B3D3661000AE2B0 /* MediaPlayer.framework */; };
-		3AF5303E1B3D37C4000AE2B0 /* PlaylistTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF5303D1B3D37C4000AE2B0 /* PlaylistTVC.m */; };
+		3AF5303E1B3D37C4000AE2B0 /* PlaylistTVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AF5303D1B3D37C4000AE2B0 /* PlaylistTVC.mm */; };
 		3AF530411B405695000AE2B0 /* PlaylistTVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF530401B405695000AE2B0 /* PlaylistTVCCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		3A006C981B4C827B00FE1BFC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3A006C9A1B4D038600FE1BFC /* Meter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Meter.h; sourceTree = "<group>"; };
+		3A006C9B1B4D041F00FE1BFC /* Meter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Meter.cpp; sourceTree = "<group>"; };
 		3AF52FFF1B3D2DA0000AE2B0 /* tonafmDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tonafmDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AF530031B3D2DA0000AE2B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AF530041B3D2DA0000AE2B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,7 +54,7 @@
 		3AF530371B3D3283000AE2B0 /* PlaylistTVCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistTVCCell.m; sourceTree = "<group>"; };
 		3AF530391B3D3661000AE2B0 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		3AF5303C1B3D37C4000AE2B0 /* PlaylistTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistTVC.h; sourceTree = "<group>"; };
-		3AF5303D1B3D37C4000AE2B0 /* PlaylistTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistTVC.m; sourceTree = "<group>"; };
+		3AF5303D1B3D37C4000AE2B0 /* PlaylistTVC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlaylistTVC.mm; sourceTree = "<group>"; };
 		3AF530401B405695000AE2B0 /* PlaylistTVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaylistTVCCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +81,8 @@
 		3A006C871B4C6B1700FE1BFC /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				3A006C9A1B4D038600FE1BFC /* Meter.h */,
+				3A006C9B1B4D041F00FE1BFC /* Meter.cpp */,
 			);
 			name = Audio;
 			sourceTree = "<group>";
@@ -168,7 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				3AF5303C1B3D37C4000AE2B0 /* PlaylistTVC.h */,
-				3AF5303D1B3D37C4000AE2B0 /* PlaylistTVC.m */,
+				3AF5303D1B3D37C4000AE2B0 /* PlaylistTVC.mm */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -276,10 +281,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF530081B3D2DA0000AE2B0 /* AppDelegate.m in Sources */,
-				3AF5303E1B3D37C4000AE2B0 /* PlaylistTVC.m in Sources */,
+				3AF5303E1B3D37C4000AE2B0 /* PlaylistTVC.mm in Sources */,
 				3AF530381B3D3283000AE2B0 /* PlaylistTVCCell.m in Sources */,
 				3AF530051B3D2DA0000AE2B0 /* main.m in Sources */,
 				3AF5300B1B3D2DA0000AE2B0 /* tonafmDemo.xcdatamodeld in Sources */,
+				3A006C9C1B4D041F00FE1BFC /* Meter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

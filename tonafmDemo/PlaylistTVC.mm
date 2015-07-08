@@ -8,10 +8,10 @@
 
 #import "PlaylistTVC.h"
 #import "PlaylistTVCCell.h"
+#import "Meter.h"
 
 #import <AVFoundation/AVFoundation.h>
 
-@import SystemConfiguration.CaptiveNetwork;
 
 @interface PlaylistTVC ()
 
@@ -23,6 +23,7 @@
 
 @implementation PlaylistTVC {
     BOOL _isPlaying;
+    TONAFMLED::Meter meter;
 }
 
 - (void)viewDidLoad {
@@ -31,6 +32,8 @@
     // Register music playr notifications
     _isPlaying = NO;
     [self configureAudioSession];
+    CADisplayLink *dpLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(update)];
+    [dpLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
     
     [self loadAllMusic];
     // Uncomment the following line to preserve selection between presentations.
@@ -38,7 +41,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self fetchSSIDInfo];
 }
 
 - (void) loadAllMusic
@@ -124,27 +126,6 @@
     return cell;
 }
 
-/** Returns first non-empty SSID network info dictionary.
- *  @see CNCopyCurrentNetworkInfo */
-- (NSDictionary *)fetchSSIDInfo
-{
-    NSArray *interfaceNames = CFBridgingRelease(CNCopySupportedInterfaces());
-    NSLog(@"%s: Supported interfaces: %@", __func__, interfaceNames);
-    
-    NSDictionary *SSIDInfo;
-    for (NSString *interfaceName in interfaceNames) {
-        SSIDInfo = CFBridgingRelease(
-                                     CNCopyCurrentNetworkInfo((__bridge CFStringRef)interfaceName));
-        NSLog(@"%s: %@ => %@", __func__, interfaceName, SSIDInfo);
-        
-        BOOL isNotEmpty = (SSIDInfo.count > 0);
-        if (isNotEmpty) {
-            break;
-        }
-    }
-    return SSIDInfo;
-}
-
 //	 To conform to the Human Interface Guidelines, selections should not be persistent --
 //	 deselect the row after it has been selected.
 
@@ -227,7 +208,7 @@
         NSLog(@"%@", [error localizedDescription]);
     }
     [_audioPlayer setNumberOfLoops:-1];
-    
+    [_audioPlayer setMeteringEnabled:YES];
     [self playPause];   // Play
 }
 
@@ -238,6 +219,30 @@
     if (error) {
         NSLog(@"Error setting category: %@", [error description]);
     }
+}
+
+- (void)update
+{
+    // 1
+    float scale = 0.5;
+    if (_audioPlayer.playing )
+    {
+        // 2
+        [_audioPlayer updateMeters];
+        
+        // 3
+        float power = 0.0f;
+        for (int i = 0; i < [_audioPlayer numberOfChannels]; i++) {
+            power += [_audioPlayer averagePowerForChannel:i];
+        }
+        power /= [_audioPlayer numberOfChannels];
+        
+        // 4
+        float level = meter.ValueAt(power);
+        scale = level * 5;
+        NSLog(@"Current scale: %f", scale);
+    }
+    
 }
 
 - (void)dealloc {
