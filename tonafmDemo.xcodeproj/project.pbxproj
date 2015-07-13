@@ -23,7 +23,7 @@
 		3AF530411B405695000AE2B0 /* PlaylistTVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF530401B405695000AE2B0 /* PlaylistTVCCell.xib */; };
 		3AFD72941B52A5730007BB48 /* LedControllerWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD72911B52A5730007BB48 /* LedControllerWrapper.mm */; };
 		3AFD72951B52A5730007BB48 /* PortScannerSingleton.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD72931B52A5730007BB48 /* PortScannerSingleton.mm */; };
-		3AFD72981B52A8910007BB48 /* libLedPortScanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AFD728A1B52A4C90007BB48 /* libLedPortScanner.a */; };
+		3AFD72A61B546CBA0007BB48 /* libLedPortScanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AFD72A11B546CA30007BB48 /* libLedPortScanner.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,23 +34,23 @@
 			remoteGlobalIDString = 3AF52FFE1B3D2DA0000AE2B0;
 			remoteInfo = tonafmDemo;
 		};
-		3AFD72891B52A4C90007BB48 /* PBXContainerItemProxy */ = {
+		3AFD72A01B546CA30007BB48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3AFD72841B52A4C90007BB48 /* LedPortScanner.xcodeproj */;
+			containerPortal = 3AFD729B1B546CA30007BB48 /* LedPortScanner.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3A95A0551B4DD3DC00E9417D;
 			remoteInfo = LedPortScanner;
 		};
-		3AFD728B1B52A4C90007BB48 /* PBXContainerItemProxy */ = {
+		3AFD72A21B546CA30007BB48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3AFD72841B52A4C90007BB48 /* LedPortScanner.xcodeproj */;
+			containerPortal = 3AFD729B1B546CA30007BB48 /* LedPortScanner.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3A95A0601B4DD3DC00E9417D;
 			remoteInfo = LedPortScannerTests;
 		};
-		3AFD72961B52A8110007BB48 /* PBXContainerItemProxy */ = {
+		3AFD72A41B546CB40007BB48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3AFD72841B52A4C90007BB48 /* LedPortScanner.xcodeproj */;
+			containerPortal = 3AFD729B1B546CA30007BB48 /* LedPortScanner.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 3A95A0541B4DD3DC00E9417D;
 			remoteInfo = LedPortScanner;
@@ -81,11 +81,11 @@
 		3AF5303C1B3D37C4000AE2B0 /* PlaylistTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistTVC.h; sourceTree = "<group>"; };
 		3AF5303D1B3D37C4000AE2B0 /* PlaylistTVC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlaylistTVC.mm; sourceTree = "<group>"; };
 		3AF530401B405695000AE2B0 /* PlaylistTVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaylistTVCCell.xib; sourceTree = "<group>"; };
-		3AFD72841B52A4C90007BB48 /* LedPortScanner.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LedPortScanner.xcodeproj; path = ../tonafm/LedPortScanner/LedPortScanner.xcodeproj; sourceTree = "<group>"; };
 		3AFD72901B52A5730007BB48 /* LedControllerWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LedControllerWrapper.h; sourceTree = "<group>"; };
 		3AFD72911B52A5730007BB48 /* LedControllerWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LedControllerWrapper.mm; sourceTree = "<group>"; };
 		3AFD72921B52A5730007BB48 /* PortScannerSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortScannerSingleton.h; sourceTree = "<group>"; };
 		3AFD72931B52A5730007BB48 /* PortScannerSingleton.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PortScannerSingleton.mm; sourceTree = "<group>"; };
+		3AFD729B1B546CA30007BB48 /* LedPortScanner.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LedPortScanner.xcodeproj; path = LedPortScanner/LedPortScanner.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AFD72981B52A8910007BB48 /* libLedPortScanner.a in Frameworks */,
+				3AFD72A61B546CBA0007BB48 /* libLedPortScanner.a in Frameworks */,
 				3A66E5021B4EF4F7000C339C /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,7 +144,7 @@
 				3AF530011B3D2DA0000AE2B0 /* tonafmDemo */,
 				3AF5301E1B3D2DA0000AE2B0 /* tonafmDemoTests */,
 				3AF530001B3D2DA0000AE2B0 /* Products */,
-				3AFD72841B52A4C90007BB48 /* LedPortScanner.xcodeproj */,
+				3AFD729B1B546CA30007BB48 /* LedPortScanner.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,11 +230,11 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		3AFD72851B52A4C90007BB48 /* Products */ = {
+		3AFD729C1B546CA30007BB48 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3AFD728A1B52A4C90007BB48 /* libLedPortScanner.a */,
-				3AFD728C1B52A4C90007BB48 /* LedPortScannerTests.xctest */,
+				3AFD72A11B546CA30007BB48 /* libLedPortScanner.a */,
+				3AFD72A31B546CA30007BB48 /* LedPortScannerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,7 +253,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				3AFD72971B52A8110007BB48 /* PBXTargetDependency */,
+				3AFD72A51B546CB40007BB48 /* PBXTargetDependency */,
 			);
 			name = tonafmDemo;
 			productName = tonafmDemo;
@@ -309,8 +309,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 3AFD72851B52A4C90007BB48 /* Products */;
-					ProjectRef = 3AFD72841B52A4C90007BB48 /* LedPortScanner.xcodeproj */;
+					ProductGroup = 3AFD729C1B546CA30007BB48 /* Products */;
+					ProjectRef = 3AFD729B1B546CA30007BB48 /* LedPortScanner.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -322,18 +322,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		3AFD728A1B52A4C90007BB48 /* libLedPortScanner.a */ = {
+		3AFD72A11B546CA30007BB48 /* libLedPortScanner.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libLedPortScanner.a;
-			remoteRef = 3AFD72891B52A4C90007BB48 /* PBXContainerItemProxy */;
+			remoteRef = 3AFD72A01B546CA30007BB48 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3AFD728C1B52A4C90007BB48 /* LedPortScannerTests.xctest */ = {
+		3AFD72A31B546CA30007BB48 /* LedPortScannerTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = LedPortScannerTests.xctest;
-			remoteRef = 3AFD728B1B52A4C90007BB48 /* PBXContainerItemProxy */;
+			remoteRef = 3AFD72A21B546CA30007BB48 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -393,10 +393,10 @@
 			target = 3AF52FFE1B3D2DA0000AE2B0 /* tonafmDemo */;
 			targetProxy = 3AF5301C1B3D2DA0000AE2B0 /* PBXContainerItemProxy */;
 		};
-		3AFD72971B52A8110007BB48 /* PBXTargetDependency */ = {
+		3AFD72A51B546CB40007BB48 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LedPortScanner;
-			targetProxy = 3AFD72961B52A8110007BB48 /* PBXContainerItemProxy */;
+			targetProxy = 3AFD72A41B546CB40007BB48 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
