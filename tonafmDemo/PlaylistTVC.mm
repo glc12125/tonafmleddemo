@@ -9,6 +9,8 @@
 #import "PlaylistTVC.h"
 #import "PlaylistTVCCell.h"
 #import "Meter.h"
+#import "LedControllerWrapper.h"
+#import "PortScannerSingleton.h"
 
 #import <AVFoundation/AVFoundation.h>
 
@@ -16,8 +18,10 @@
 @interface PlaylistTVC ()
 
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
-
 @property (nonatomic, strong) NSMutableArray *localMusicList;
+@property (nonatomic, strong) PortScannerSingleton *portscannerSingleton;
+@property (nonatomic, strong) LedControllerWrapper * ledController;
+@property (atomic) int ledControllerTimer;
 
 @end
 
@@ -25,6 +29,8 @@
     BOOL _isPlaying;
     TONAFMLED::Meter meter;
 }
+
+const int LEDCONTROLLE_INTERVAL= 10;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,6 +42,15 @@
     [dpLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
     
     [self loadAllMusic];
+    
+    // Initialize port scanner
+    self.portscannerSingleton = [PortScannerSingleton sharedInstance];
+    [self.portscannerSingleton startScanning];
+    self.ledController = [[LedControllerWrapper alloc] init];
+    
+    // Initialize ledcontroller related
+    self.ledControllerTimer = LEDCONTROLLE_INTERVAL;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -223,24 +238,37 @@
 
 - (void)update
 {
-    // 1
-    float scale = 0.5;
     if (_audioPlayer.playing )
     {
+        // 1
+        float scale = 0.5;
+        
         // 2
         [_audioPlayer updateMeters];
         
-        // 3
-        float power = 0.0f;
-        for (int i = 0; i < [_audioPlayer numberOfChannels]; i++) {
-            power += [_audioPlayer averagePowerForChannel:i];
+        if (self.ledControllerTimer <= 0) {
+            // 3
+            float power = 0.0f;
+            for (int i = 0; i < [_audioPlayer numberOfChannels]; i++) {
+                power += [_audioPlayer averagePowerForChannel:i];
+            }
+            power /= [_audioPlayer numberOfChannels];
+            
+            // 4
+            float level = meter.ValueAt(power);
+            scale = level * 5;
+            //NSLog(@"Current scale: %f", scale); // Comment this, otherwise there will be laging congtrolling led
+            dispatch_queue_t backgroundQueue;
+            backgroundQueue = dispatch_queue_create("playlisttvc.ledcontroller.bgqueue", DISPATCH_QUEUE_CONCURRENT);
+            dispatch_async(backgroundQueue, ^(void) {
+                [_ledController controlLedByRgbAndAvgPower:120
+                                                     green:120
+                                                      blue:120
+                                                  avgPower:scale];
+            });
+            self.ledControllerTimer = LEDCONTROLLE_INTERVAL;
         }
-        power /= [_audioPlayer numberOfChannels];
-        
-        // 4
-        float level = meter.ValueAt(power);
-        scale = level * 5;
-        NSLog(@"Current scale: %f", scale);
+        --self.ledControllerTimer;
     }
     
 }

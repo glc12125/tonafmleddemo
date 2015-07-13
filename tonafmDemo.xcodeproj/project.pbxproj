@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A006C991B4C827B00FE1BFC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A006C981B4C827B00FE1BFC /* AVFoundation.framework */; };
 		3A006C9C1B4D041F00FE1BFC /* Meter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A006C9B1B4D041F00FE1BFC /* Meter.cpp */; };
+		3A66E4E81B4E5469000C339C /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A66E4E71B4E5469000C339C /* Address.m */; };
+		3A66E5021B4EF4F7000C339C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A66E5011B4EF4F7000C339C /* AVFoundation.framework */; };
 		3AF530051B3D2DA0000AE2B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530041B3D2DA0000AE2B0 /* main.m */; };
 		3AF530081B3D2DA0000AE2B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530071B3D2DA0000AE2B0 /* AppDelegate.m */; };
 		3AF5300B1B3D2DA0000AE2B0 /* tonafmDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530091B3D2DA0000AE2B0 /* tonafmDemo.xcdatamodeld */; };
@@ -18,9 +19,11 @@
 		3AF530221B3D2DA0000AE2B0 /* tonafmDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530211B3D2DA0000AE2B0 /* tonafmDemoTests.m */; };
 		3AF5302C1B3D2DD1000AE2B0 /* iphoneMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AF5302B1B3D2DD1000AE2B0 /* iphoneMain.storyboard */; };
 		3AF530381B3D3283000AE2B0 /* PlaylistTVCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF530371B3D3283000AE2B0 /* PlaylistTVCCell.m */; };
-		3AF5303A1B3D3661000AE2B0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF530391B3D3661000AE2B0 /* MediaPlayer.framework */; };
 		3AF5303E1B3D37C4000AE2B0 /* PlaylistTVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AF5303D1B3D37C4000AE2B0 /* PlaylistTVC.mm */; };
 		3AF530411B405695000AE2B0 /* PlaylistTVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF530401B405695000AE2B0 /* PlaylistTVCCell.xib */; };
+		3AFD72941B52A5730007BB48 /* LedControllerWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD72911B52A5730007BB48 /* LedControllerWrapper.mm */; };
+		3AFD72951B52A5730007BB48 /* PortScannerSingleton.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD72931B52A5730007BB48 /* PortScannerSingleton.mm */; };
+		3AFD72981B52A8910007BB48 /* libLedPortScanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AFD728A1B52A4C90007BB48 /* libLedPortScanner.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,12 +34,35 @@
 			remoteGlobalIDString = 3AF52FFE1B3D2DA0000AE2B0;
 			remoteInfo = tonafmDemo;
 		};
+		3AFD72891B52A4C90007BB48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AFD72841B52A4C90007BB48 /* LedPortScanner.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3A95A0551B4DD3DC00E9417D;
+			remoteInfo = LedPortScanner;
+		};
+		3AFD728B1B52A4C90007BB48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AFD72841B52A4C90007BB48 /* LedPortScanner.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3A95A0601B4DD3DC00E9417D;
+			remoteInfo = LedPortScannerTests;
+		};
+		3AFD72961B52A8110007BB48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AFD72841B52A4C90007BB48 /* LedPortScanner.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A95A0541B4DD3DC00E9417D;
+			remoteInfo = LedPortScanner;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3A006C981B4C827B00FE1BFC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3A006C9A1B4D038600FE1BFC /* Meter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Meter.h; sourceTree = "<group>"; };
 		3A006C9B1B4D041F00FE1BFC /* Meter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Meter.cpp; sourceTree = "<group>"; };
+		3A66E4E61B4E5469000C339C /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		3A66E4E71B4E5469000C339C /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
+		3A66E5011B4EF4F7000C339C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3AF52FFF1B3D2DA0000AE2B0 /* tonafmDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tonafmDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AF530031B3D2DA0000AE2B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AF530041B3D2DA0000AE2B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,10 +78,14 @@
 		3AF5302B1B3D2DD1000AE2B0 /* iphoneMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iphoneMain.storyboard; path = ../iphoneMain.storyboard; sourceTree = "<group>"; };
 		3AF530361B3D3283000AE2B0 /* PlaylistTVCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistTVCCell.h; sourceTree = "<group>"; };
 		3AF530371B3D3283000AE2B0 /* PlaylistTVCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistTVCCell.m; sourceTree = "<group>"; };
-		3AF530391B3D3661000AE2B0 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		3AF5303C1B3D37C4000AE2B0 /* PlaylistTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistTVC.h; sourceTree = "<group>"; };
 		3AF5303D1B3D37C4000AE2B0 /* PlaylistTVC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlaylistTVC.mm; sourceTree = "<group>"; };
 		3AF530401B405695000AE2B0 /* PlaylistTVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaylistTVCCell.xib; sourceTree = "<group>"; };
+		3AFD72841B52A4C90007BB48 /* LedPortScanner.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LedPortScanner.xcodeproj; path = ../tonafm/LedPortScanner/LedPortScanner.xcodeproj; sourceTree = "<group>"; };
+		3AFD72901B52A5730007BB48 /* LedControllerWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LedControllerWrapper.h; sourceTree = "<group>"; };
+		3AFD72911B52A5730007BB48 /* LedControllerWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LedControllerWrapper.mm; sourceTree = "<group>"; };
+		3AFD72921B52A5730007BB48 /* PortScannerSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortScannerSingleton.h; sourceTree = "<group>"; };
+		3AFD72931B52A5730007BB48 /* PortScannerSingleton.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PortScannerSingleton.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A006C991B4C827B00FE1BFC /* AVFoundation.framework in Frameworks */,
-				3AF5303A1B3D3661000AE2B0 /* MediaPlayer.framework in Frameworks */,
+				3AFD72981B52A8910007BB48 /* libLedPortScanner.a in Frameworks */,
+				3A66E5021B4EF4F7000C339C /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +117,26 @@
 			name = Audio;
 			sourceTree = "<group>";
 		};
+		3A66E4E51B4E5452000C339C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3A66E4E61B4E5469000C339C /* Address.h */,
+				3A66E4E71B4E5469000C339C /* Address.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		3A95A09B1B4DD64F00E9417D /* LedControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3AFD72901B52A5730007BB48 /* LedControllerWrapper.h */,
+				3AFD72911B52A5730007BB48 /* LedControllerWrapper.mm */,
+				3AFD72921B52A5730007BB48 /* PortScannerSingleton.h */,
+				3AFD72931B52A5730007BB48 /* PortScannerSingleton.mm */,
+			);
+			name = LedControllers;
+			sourceTree = "<group>";
+		};
 		3AF52FF61B3D2DA0000AE2B0 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +144,7 @@
 				3AF530011B3D2DA0000AE2B0 /* tonafmDemo */,
 				3AF5301E1B3D2DA0000AE2B0 /* tonafmDemoTests */,
 				3AF530001B3D2DA0000AE2B0 /* Products */,
+				3AFD72841B52A4C90007BB48 /* LedPortScanner.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +160,8 @@
 		3AF530011B3D2DA0000AE2B0 /* tonafmDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3A66E4E51B4E5452000C339C /* Models */,
+				3A95A09B1B4DD64F00E9417D /* LedControllers */,
 				3A006C871B4C6B1700FE1BFC /* Audio */,
 				3AF5303F1B3D37D0000AE2B0 /* View Controllers */,
 				3AF5302D1B3D312C000AE2B0 /* Views */,
@@ -163,8 +216,7 @@
 		3AF5303B1B3D3667000AE2B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3A006C981B4C827B00FE1BFC /* AVFoundation.framework */,
-				3AF530391B3D3661000AE2B0 /* MediaPlayer.framework */,
+				3A66E5011B4EF4F7000C339C /* AVFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -176,6 +228,15 @@
 				3AF5303D1B3D37C4000AE2B0 /* PlaylistTVC.mm */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3AFD72851B52A4C90007BB48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AFD728A1B52A4C90007BB48 /* libLedPortScanner.a */,
+				3AFD728C1B52A4C90007BB48 /* LedPortScannerTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +253,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3AFD72971B52A8110007BB48 /* PBXTargetDependency */,
 			);
 			name = tonafmDemo;
 			productName = tonafmDemo;
@@ -245,6 +307,12 @@
 			mainGroup = 3AF52FF61B3D2DA0000AE2B0;
 			productRefGroup = 3AF530001B3D2DA0000AE2B0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3AFD72851B52A4C90007BB48 /* Products */;
+					ProjectRef = 3AFD72841B52A4C90007BB48 /* LedPortScanner.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3AF52FFE1B3D2DA0000AE2B0 /* tonafmDemo */,
@@ -252,6 +320,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3AFD728A1B52A4C90007BB48 /* libLedPortScanner.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLedPortScanner.a;
+			remoteRef = 3AFD72891B52A4C90007BB48 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3AFD728C1B52A4C90007BB48 /* LedPortScannerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LedPortScannerTests.xctest;
+			remoteRef = 3AFD728B1B52A4C90007BB48 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3AF52FFD1B3D2DA0000AE2B0 /* Resources */ = {
@@ -281,6 +366,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF530081B3D2DA0000AE2B0 /* AppDelegate.m in Sources */,
+				3AFD72941B52A5730007BB48 /* LedControllerWrapper.mm in Sources */,
+				3AFD72951B52A5730007BB48 /* PortScannerSingleton.mm in Sources */,
+				3A66E4E81B4E5469000C339C /* Address.m in Sources */,
 				3AF5303E1B3D37C4000AE2B0 /* PlaylistTVC.mm in Sources */,
 				3AF530381B3D3283000AE2B0 /* PlaylistTVCCell.m in Sources */,
 				3AF530051B3D2DA0000AE2B0 /* main.m in Sources */,
@@ -304,6 +392,11 @@
 			isa = PBXTargetDependency;
 			target = 3AF52FFE1B3D2DA0000AE2B0 /* tonafmDemo */;
 			targetProxy = 3AF5301C1B3D2DA0000AE2B0 /* PBXContainerItemProxy */;
+		};
+		3AFD72971B52A8110007BB48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LedPortScanner;
+			targetProxy = 3AFD72961B52A8110007BB48 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -413,6 +506,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = tonafmDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,6 +521,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = tonafmDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
